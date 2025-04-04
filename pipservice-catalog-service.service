@@ -1,0 +1,15 @@
+[Unit]
+Description=ASF Infrastructure Catalog Service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/catalog-service
+ExecStart=poetry run python3 server.py
+ExecReload=/bin/kill -SIGUSR1 $MAINPID
+Restart=always
+User=www-data
+Group=www-data
+LogLevelMax=info
+
+[Install]
+WantedBy=multi-user.target
