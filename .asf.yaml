@@ -1,6 +1,8 @@
 github:
   description:   "ASF Infrastructure Catalog Service"
   homepage:      https://infra.apache.org/
+  features:
+    issues: true
   collaborators: []
   autolink_jira:
     - INFRA
