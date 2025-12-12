@@ -28,7 +28,7 @@ collection = asfquart.APP.data
 @asfquart.APP.route("/lookup/<string:type>")
 @asfquart.APP.route("/lookup/<string:type>/<string:uid>")
 # Require membership for now, while we test
-@asfquart.auth.require(asfquart.auth.Requirements.member)
+@asfquart.auth.require(asfquart.auth.Requirements.committer)
 async def lookup_public(type: str = "project", uid: str = None):
     query = await asfquart.utils.formdata()
     if uid:
